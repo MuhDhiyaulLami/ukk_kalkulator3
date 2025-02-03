@@ -34,12 +34,17 @@
             $hasil = $angka1 * $angka2;
         }else if($operator == ':') {
             if ($angka2 == 0) {
-                echo "<p style='color: red;'>Error: Input harus berupa angka!</p>";
+                echo "<p style='color: red;'>Error: Masukan bilangan selain nol </p>";
                 echo "<a href='index.php'>Kembali</a>";
                 exit;
             }
             $hasil = $angka1 / $angka2;
         }else if($operator == '%') {
+            if ($angka2 == 0) {
+                echo "<p style='color: red;'>Error: Masukan bilangan selain nol </p>";
+                echo "<a href='index.php'>Kembali</a>";
+                exit;
+            }
             $hasil = $hasil % $angka2;
         }else if($operator == '^') {
             $hasil = pow($angka1,$angka2);
